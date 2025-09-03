@@ -237,11 +237,44 @@ header {
     text-align: center;
 }
 .ads-create-tie {
+    --gap: 1rem;
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    background-color: #E8A94C;
     align-items: center;
-    font-weight: normal;
+    overflow: hidden;
+    gap: var(--gap);
+    width: 100%;
+    height: 40px; 
+    background-color: #E8A94C;
+    padding: 10px 0;
+}
+.marquee_content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: slide-in-out 25s linear infinite;
+    color: #fff;
+    list-style: none;
+    align-items: center;
+}
+@media (max-width:575.98px) {
+    .marquee_content {
+        animation: slide-in-out 20s linear infinite;
+        justify-content: space-around;
+    }
+    .marquee_content .item {
+        margin-left: 250px;
+    }
+}
+@keyframes slide-in-out {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }
 .wrapper-display {
     display: flex;
@@ -292,6 +325,7 @@ footer button {
 @media (max-width: 575.98px) {
     .input_email {
         width: 100%;
+        margin: 10px 0;
     }
 }
 .wrapper-footer {
@@ -311,7 +345,10 @@ footer button {
 }
 @media (max-width: 575.98px) {
     .wrapper-footer {
-        display: flex;
+        display: block;
+    }
+    .footer-menulist {
+        display: block;
     }
     .watermark-promotion {
         display: block;
