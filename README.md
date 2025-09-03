@@ -1,3 +1,6 @@
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d7ab3fa2-a5b2-475d-8e92-9d3e4d594891" />
+
+
 A fully responsive landing page for an online perfume store. Built with HTML, CSS, and JavaScript to showcase products elegantly with a clean and modern layout.
 
 
